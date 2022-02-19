@@ -1,0 +1,12 @@
+orbs:
+  haskell: haskell-works/haskell-build@4.1.9
+version: 2.1
+workflows:
+  build-my-library:
+    jobs:
+      - haskell/build:
+          executor: haskell/ghc-8_6_3
+          name: GHC 8.6.3
+      - haskell/build:
+          executor: haskell/ghc-8_10_2
+          name: GHC 8.10.2
