@@ -29,6 +29,8 @@ ghc-options:
 
 library:
   source-dirs: src
+  exposed-modules:
+    - Data.Function.FastMemo
 
 tests:
   fastmemo-test:

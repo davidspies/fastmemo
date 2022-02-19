@@ -27,6 +27,7 @@ source-repository head
 library
   exposed-modules:
       Data.Function.FastMemo
+  other-modules:
       Data.Function.FastMemo.ByteString
       Data.Function.FastMemo.Char
       Data.Function.FastMemo.Class
@@ -38,7 +39,6 @@ library
       Data.Function.FastMemo.Util
       Data.Function.FastMemo.Vector
       Data.Function.FastMemo.Word
-  other-modules:
       Paths_fastmemo
   hs-source-dirs:
       src

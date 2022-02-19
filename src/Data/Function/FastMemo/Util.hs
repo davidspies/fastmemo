@@ -5,7 +5,7 @@ module Data.Function.FastMemo.Util (memoizeFixedLen) where
 import Data.Function.FastMemo.Class (Memoizable, memoize)
 import GHC.Stack (HasCallStack)
 
--- | Memoizable a function on a list whose length is predetermined.
+-- | Memoize a function on a list whose length is predetermined.
 --
 -- If called on a larger list, it will truncate; on a smaller list, it will throw an error
 memoizeFixedLen :: (HasCallStack, Memoizable a) => Int -> ([a] -> b) -> [a] -> b
