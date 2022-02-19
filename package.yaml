@@ -1,0 +1,43 @@
+name: fastmemo
+version: 0.1.0.0
+github: "davidspies/fastmemo"
+license: BSD3
+author: "David Spies"
+maintainer: "dnspies@gmail.com"
+copyright: "2022 David Spies"
+
+extra-source-files:
+  - README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/davidspies/fastmemo#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - bytestring
+  - utf8-string
+  - vector
+
+ghc-options:
+  - -Wall
+
+library:
+  source-dirs: src
+
+tests:
+  fastmemo-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - fastmemo
+      - QuickCheck
