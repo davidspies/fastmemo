@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-orphans #-}
 
-module Data.Function.FastMemo.Ratio where
+module Data.Function.FastMemo.Ratio () where
 
 import Data.Function.FastMemo.Class (Memoizable (..))
 import Data.Ratio (Ratio, denominator, numerator, (%))

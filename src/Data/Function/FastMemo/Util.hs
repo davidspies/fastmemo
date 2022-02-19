@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module Data.Function.FastMemo.Util where
+module Data.Function.FastMemo.Util (memoizeFixedLen) where
 
 import Data.Function.FastMemo.Class (Memoizable, memoize)
 import GHC.Stack (HasCallStack)

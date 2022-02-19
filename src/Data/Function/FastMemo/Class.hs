@@ -4,7 +4,7 @@
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE TypeOperators #-}
 
-module Data.Function.FastMemo.Class (Memoizable (..), GMemoize) where
+module Data.Function.FastMemo.Class (Memoizable (..)) where
 
 import Data.List.NonEmpty (NonEmpty)
 import GHC.Generics

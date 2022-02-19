@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-orphans #-}
 
-module Data.Function.FastMemo.ByteString where
+module Data.Function.FastMemo.ByteString () where
 
 import qualified Data.ByteString as SBS
 import qualified Data.ByteString.Lazy as LBS

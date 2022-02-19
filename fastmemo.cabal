@@ -30,6 +30,7 @@ library
       Data.Function.FastMemo.ByteString
       Data.Function.FastMemo.Char
       Data.Function.FastMemo.Class
+      Data.Function.FastMemo.Instances
       Data.Function.FastMemo.Int
       Data.Function.FastMemo.Integer
       Data.Function.FastMemo.Natural

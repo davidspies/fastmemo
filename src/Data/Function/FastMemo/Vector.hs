@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-orphans #-}
 
-module Data.Function.FastMemo.Vector where
+module Data.Function.FastMemo.Vector () where
 
 import Data.Function.FastMemo.Class (Memoizable (..))
 import qualified Data.Vector as V
