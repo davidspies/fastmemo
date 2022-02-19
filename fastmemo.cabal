@@ -6,7 +6,9 @@ cabal-version: 1.12
 
 name:           fastmemo
 version:        0.1.0.0
+synopsis:       Memoize functions on Generic types
 description:    Please see the README on GitHub at <https://github.com/davidspies/fastmemo#readme>
+category:       Memoization
 homepage:       https://github.com/davidspies/fastmemo#readme
 bug-reports:    https://github.com/davidspies/fastmemo/issues
 author:         David Spies
