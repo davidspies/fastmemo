@@ -14,7 +14,7 @@ instance Memoizable Integer where
   memoize f = memoize (f . signedNatToInteger) . integerToSignedNat
 
 data Sign = NegativePlus1 | NonNegative
-  deriving (Eq, Show, Generic, Memoizable)
+  deriving (Generic, Memoizable)
 
 integerToSignedNat :: Integer -> (Sign, Natural)
 integerToSignedNat i
