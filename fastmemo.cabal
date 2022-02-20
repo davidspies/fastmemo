@@ -45,9 +45,9 @@ library
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
-    , bytestring
-    , utf8-string
-    , vector
+    , bytestring ==0.10.*
+    , utf8-string ==1.0.*
+    , vector ==0.12.*
   default-language: Haskell2010
 
 test-suite fastmemo-test
@@ -62,8 +62,8 @@ test-suite fastmemo-test
   build-depends:
       QuickCheck
     , base >=4.7 && <5
-    , bytestring
+    , bytestring ==0.10.*
     , fastmemo
-    , utf8-string
-    , vector
+    , utf8-string ==1.0.*
+    , vector ==0.12.*
   default-language: Haskell2010
