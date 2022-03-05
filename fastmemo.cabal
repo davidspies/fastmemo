@@ -44,7 +44,7 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      base >=4.7 && <5
+      base >=4.7 && <4.15
     , bytestring ==0.10.*
     , utf8-string ==1.0.*
     , vector ==0.12.*
@@ -61,7 +61,7 @@ test-suite fastmemo-test
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       QuickCheck
-    , base >=4.7 && <5
+    , base >=4.7 && <4.15
     , bytestring ==0.10.*
     , fastmemo
     , utf8-string ==1.0.*
