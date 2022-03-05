@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           fastmemo
-version:        0.1.0.0
+version:        0.1.0.1
 synopsis:       Memoize functions on Generic types
 description:    Please see the README on GitHub at <https://github.com/davidspies/fastmemo#readme>
 category:       Memoization
@@ -44,7 +44,7 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      base >=4.7 && <4.15
+      base >=4.7 && <4.16
     , bytestring ==0.10.*
     , utf8-string ==1.0.*
     , vector ==0.12.*
@@ -61,7 +61,7 @@ test-suite fastmemo-test
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       QuickCheck
-    , base >=4.7 && <4.15
+    , base >=4.7 && <4.16
     , bytestring ==0.10.*
     , fastmemo
     , utf8-string ==1.0.*
