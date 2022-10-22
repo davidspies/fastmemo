@@ -46,11 +46,11 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      base >=4.7 && <4.16
-    , bytestring ==0.10.*
+      base >=4.7 && <4.18
+    , bytestring >=0.10 && <0.12
     , containers ==0.6.*
     , utf8-string ==1.0.*
-    , vector ==0.12.*
+    , vector >=0.12 && <0.14
   default-language: Haskell2010
 
 test-suite fastmemo-test
@@ -64,10 +64,10 @@ test-suite fastmemo-test
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       QuickCheck
-    , base >=4.7 && <4.16
-    , bytestring ==0.10.*
+    , base >=4.7 && <4.18
+    , bytestring >=0.10 && <0.12
     , containers ==0.6.*
     , fastmemo
     , utf8-string ==1.0.*
-    , vector ==0.12.*
+    , vector >=0.12 && <0.14
   default-language: Haskell2010

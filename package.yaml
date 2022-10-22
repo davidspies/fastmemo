@@ -19,11 +19,11 @@ category: Memoization
 description: Please see the README on GitHub at <https://github.com/davidspies/fastmemo#readme>
 
 dependencies:
-  - base >= 4.7 && < 4.16
-  - bytestring >= 0.10 && < 0.11
+  - base >= 4.7 && < 4.18
+  - bytestring >= 0.10 && < 0.12
   - containers >= 0.6 && < 0.7
   - utf8-string >= 1.0 && < 1.1
-  - vector >= 0.12 && < 0.13
+  - vector >= 0.12 && < 0.14
 
 ghc-options:
   - -Wall
