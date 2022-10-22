@@ -1,16 +1,16 @@
-{-# OPTIONS_GHC -Wno-orphans #-}
-
 -- |
 -- Straightforward function memoization library;
 -- see [Examples](https://github.com/davidspies/fastmemo/blob/master/test/Examples.hs) for example usage
-module Data.Function.FastMemo (Memoizable (..), memoizeFixedLen, memo1, memo2, memo3, memo4, memo5, memo6, memo7) where
+module Data.Function.FastMemo (AsList (..), Memoizable (..), memoizeFixedLen, memo1, memo2, memo3, memo4, memo5, memo6, memo7) where
 
 import Data.Function.FastMemo.ByteString ()
 import Data.Function.FastMemo.Char ()
 import Data.Function.FastMemo.Class (Memoizable (..))
+import Data.Function.FastMemo.Containers ()
 import Data.Function.FastMemo.Instances ()
 import Data.Function.FastMemo.Int ()
 import Data.Function.FastMemo.Integer ()
+import Data.Function.FastMemo.List (AsList (..))
 import Data.Function.FastMemo.Natural ()
 import Data.Function.FastMemo.Ratio ()
 import Data.Function.FastMemo.Util (memoizeFixedLen)

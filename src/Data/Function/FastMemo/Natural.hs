@@ -5,6 +5,7 @@ module Data.Function.FastMemo.Natural () where
 import Data.Bits (shiftL, shiftR, (.|.))
 import Data.Foldable (foldl')
 import Data.Function.FastMemo.Class (Memoizable (..))
+import Data.Function.FastMemo.List ()
 import Data.Function.FastMemo.Word ()
 import Data.List.NonEmpty (NonEmpty (..))
 import Data.Word (Word8)

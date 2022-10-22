@@ -6,7 +6,6 @@
 
 module Data.Function.FastMemo.Class (Memoizable (..)) where
 
-import Data.List.NonEmpty (NonEmpty)
 import GHC.Generics
 
 class Memoizable a where
@@ -21,7 +20,7 @@ instance GMemoize f => GMemoize (M1 i c f) where
   gMemoize f = gMemoize (f . M1) . unM1
 
 instance GMemoize V1 where
-  gMemoize _f = \case
+  gMemoize _f = \case {}
 
 instance GMemoize U1 where
   gMemoize f = let fu = f U1 in \U1 -> fu
@@ -43,7 +42,3 @@ instance (GMemoize a, GMemoize b) => GMemoize (a :+: b) where
           R1 x -> fR x
 
 instance (Memoizable a, Memoizable b) => Memoizable (a, b)
-
-instance Memoizable a => Memoizable [a]
-
-instance Memoizable a => Memoizable (NonEmpty a)
