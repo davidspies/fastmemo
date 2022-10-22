@@ -7,8 +7,14 @@ import Control.Exception (ErrorCall (..), catch, evaluate)
 import Data.Function.FastMemo
 import Data.Functor (($>))
 import Data.Int (Int16, Int32, Int64, Int8)
+import Data.IntMap (IntMap)
+import Data.IntSet (IntSet)
+import Data.Map (Map)
 import Data.Proxy (Proxy (Proxy))
 import Data.Ratio (Ratio)
+import Data.Sequence (Seq)
+import Data.Set (Set)
+import qualified Data.Tree as Containers
 import Data.Word (Word16, Word32, Word64, Word8)
 import Examples (Color (Color), Tree (Leaf, Node), fibonacci)
 import Numeric.Natural (Natural)
@@ -60,7 +66,7 @@ prop_integerMemoizesId = prop_memoizesId
 prop_bigIntegerMemoizesId :: Property
 prop_bigIntegerMemoizesId =
   forAllShrink
-    (genBigBound >>= \b -> choose (- b, b))
+    (genBigBound >>= \b -> choose (-b, b))
     shrink
     prop_memoizesId
 
@@ -137,6 +143,24 @@ prop_word64MemoizesId = prop_memoizesId
 
 prop_ratioMemoizesId :: (Integral a, Memoizable a, Show a) => Ratio a -> Property
 prop_ratioMemoizesId = prop_memoizesId
+
+prop_intsetMemoizesId :: IntSet -> Property
+prop_intsetMemoizesId = prop_memoizesId
+
+prop_intmapMemoizesId :: (Eq a, Memoizable a, Show a) => IntMap a -> Property
+prop_intmapMemoizesId = prop_memoizesId
+
+prop_setMemoizesId :: (Ord a, Memoizable a, Show a) => Set a -> Property
+prop_setMemoizesId = prop_memoizesId
+
+prop_mapMemoizesId :: (Ord a, Memoizable a, Show a, Eq b, Memoizable b, Show b) => Map a b -> Property
+prop_mapMemoizesId = prop_memoizesId
+
+prop_seqMemoizesId :: (Eq a, Memoizable a, Show a) => Seq a -> Property
+prop_seqMemoizesId = prop_memoizesId
+
+prop_containerTreeMemoizesId :: (Eq a, Memoizable a, Show a) => Containers.Tree a -> Property
+prop_containerTreeMemoizesId = prop_memoizesId
 
 deriving instance Eq Color
 
