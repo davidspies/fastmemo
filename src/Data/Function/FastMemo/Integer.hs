@@ -18,10 +18,10 @@ data Sign = NegativePlus1 | NonNegative
 
 integerToSignedNat :: Integer -> (Sign, Natural)
 integerToSignedNat i
-  | i < 0 = (NegativePlus1, fromInteger (- (i + 1)))
+  | i < 0 = (NegativePlus1, fromInteger (-(i + 1)))
   | otherwise = (NonNegative, fromInteger i)
 
 signedNatToInteger :: (Sign, Natural) -> Integer
 signedNatToInteger = \case
-  (NegativePlus1, n) -> - (toInteger n + 1)
+  (NegativePlus1, n) -> -(toInteger n + 1)
   (NonNegative, n) -> toInteger n

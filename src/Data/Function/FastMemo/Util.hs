@@ -12,7 +12,7 @@ memoizeFixedLen :: (HasCallStack, Memoizable a) => Int -> ([a] -> b) -> [a] -> b
 memoizeFixedLen n f
   | n <= 0 = const (f [])
   | otherwise =
-    let f' = memoize $ \x -> memoizeFixedLen (n - 1) (f . (x :))
-     in \case
-          [] -> error "List too short"
-          x : xs -> f' x xs
+      let f' = memoize $ \x -> memoizeFixedLen (n - 1) (f . (x :))
+       in \case
+            [] -> error "List too short"
+            x : xs -> f' x xs

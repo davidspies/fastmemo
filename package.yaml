@@ -1,5 +1,5 @@
 name: fastmemo
-version: 0.1.1
+version: 0.1.2
 github: "davidspies/fastmemo"
 license: BSD3
 author: "David Spies"
@@ -22,6 +22,7 @@ dependencies:
   - base >= 4.7 && < 4.18
   - bytestring >= 0.10 && < 0.12
   - containers >= 0.6 && < 0.7
+  - dlist
   - utf8-string >= 1.0 && < 1.1
   - vector >= 0.12 && < 0.14
 
